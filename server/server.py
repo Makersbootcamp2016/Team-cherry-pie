@@ -6,7 +6,7 @@ from flask import Flask
 app = Flask(__name__)
 
 from jinja2 import Environment, PackageLoader
-jinja_env = Environment(loader=PackageLoader('serveur','view'))
+jinja_env = Environment(loader=PackageLoader('server','view'))
 
 @app.route("/")
 def function():
