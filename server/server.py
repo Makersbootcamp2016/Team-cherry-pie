@@ -15,7 +15,7 @@ def function():
 
     gasV = 0
     gasU = '?'
-
+#test
     for sensor in dataJ['data']['sensors']:
         if sensor['description']=="Temperature":
             temp = sensor['value']
