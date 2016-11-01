@@ -36,6 +36,54 @@
 
         	<!-- Material Dashboard DEMO methods, don't include it in your project! -->
         	<script src="static/dashboard/assets/js/demo.js"></script>
+
+          <script type="text/javascript">
+            $(document).ready(function(){
+              // Javascript method's body can be found in assets/js/demos.js
+              demo.initDashboardPageCharts();
+              // REFRESH: 1 minute
+              function refresh() {
+                   window.location.reload(true);
+              }
+              setTimeout(refresh, 60000);
+              // SNAPSHOT Clik
+              $('#clicclac').on('click',function() {
+                $.ajax({ url: '/clik/0',
+                 success: function(data) {
+                   if (data == 'OK') console.log('clik');
+                 }
+               });
+              });
+              // RECORD Clik
+              /*$('#record').on('click',function() {
+               if ($(this).parent().hasClass('active')) recurl = '/clik/0';
+               else recurl = '/clik/1';
+               $.ajax({
+                 url: recurl,
+                 success: function(data) {
+                   if (data == 'OK') console.log('clik');
+                 }
+               });
+             });*/
+              // WAIT for news
+              function newspoll() {
+               $.ajax({
+                 url: '/news',
+                 dataType: 'json',
+                 success: function(data) {
+                    console.log(data)
+                    if (data['snapshot']) $("#snapshot").attr("src", data['snapshot']);
+                    //if (data['snaptime']) $("#snaptime").html(data['snaptime']);
+                    //if (data['recording']) $("#record").parent().addClass('active');
+                    //else $("#record").parent().removeClass('active');
+                 },
+                 complete: newspoll
+               });
+              }
+              newspoll();
+            });
+        </script>
+
   </head>
   <body>
     <div class="wrapper">
@@ -114,12 +162,12 @@
 
               <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
-                  <div class="card-header" data-background-color="purple">
+                  <div class="card-header" data-background-color="purple" id="cliclac">
                     <i class="material-icons">linked_camera</i>
                   </div>
                   <div class="card-content">
                     <p class="category">Photo</p>
-                    <h3 class="title"> <small> &nbsp;</small> </h3>
+                    <img id="snapshot" src="" />
                   </div>
                 </div>
               </div>
