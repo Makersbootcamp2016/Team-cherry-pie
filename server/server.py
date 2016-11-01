@@ -16,6 +16,9 @@ from jinja2 import Environment, PackageLoader
 jinja_env = Environment(loader=PackageLoader('server','view'))
 
 # Settings
+RECORD_INTERVAL = 1             # Interval between snaphots in seconds
+HISTORY_COUNT = 10              # Number of snapshot to keep
+
 SNAPSHOT_NAME = 'snapshot.jpg'
 UPLOAD_PATH = os.path.dirname(os.path.abspath(__file__))+'/static/upload/'
 
