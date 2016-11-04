@@ -68,6 +68,10 @@ def shot():
    return 'ERROR: You\'re lost Dave..'
 
 
+@app.route("/maps")
+def linktomap():
+    base = jinja_env.get_template('maps.html')
+    return base.render()
 
 if __name__ == "__main__":
     app.run(port=10000)
