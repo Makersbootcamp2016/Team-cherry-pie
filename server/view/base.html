@@ -37,12 +37,10 @@
         	<!-- Material Dashboard DEMO methods, don't include it in your project! -->
         	<script src="static/dashboard/assets/js/demo.js"></script>
 
-          <!--  Google Maps Plugin    -->
-        	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs8oXilarcbKP6_OP53H6eclbsvyCX6Uc"></script>
-
+          <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs8oXilarcbKP6_OP53H6eclbsvyCX6Uc"></script>
           <script>
               $().ready(function(){
-                  demo.initGoogleMaps();
+                  demo.initGoogleMaps(45.7748868587 , 4.890396595);
               });
           </script>
 
@@ -165,10 +163,8 @@
                     <i class="material-icons">gradient</i>
                   </div>
                   <div class="card-content">
-                    <h3 class="title">My Google Maps Demo</h3>
-
-
-
+                    <p class="category">My Google Maps Demo</p>
+                    <div id="map"></div>
                   </div>
                 </div>
               </div>
@@ -179,6 +175,5 @@
         </div>
       </div>
     </div>
-    <div id="map"></div>
   </body>
 </html>
