@@ -46,7 +46,7 @@ def function():
 
 @app.route("/clak")
 def doesrasptakeapic():
-    time.sleep(30)
+    time.sleep(10)
     return "YES"
 
 @app.route("/shot", methods=['POST'])
