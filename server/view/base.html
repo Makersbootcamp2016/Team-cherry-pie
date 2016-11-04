@@ -40,9 +40,14 @@
           <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs8oXilarcbKP6_OP53H6eclbsvyCX6Uc"></script>
           <script>
               $().ready(function(){
-                  demo.initGoogleMaps(45.7748868587 , 4.890396595);
+                  demo.initGoogleMaps({{Lat}} , {{Longit}});
               });
           </script>
+          <style>
+            #map {
+
+            }
+          </style>
 
   </head>
   <body>
@@ -108,7 +113,7 @@
           <div class="container-fluid">
             <div class="row">
 
-              <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="card card-stats">
                   <div class="card-header" data-background-color="orange">
                     <i class="material-icons">wb_sunny</i>
@@ -120,7 +125,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="card card-stats">
                   <div class="card-header" data-background-color="purple" id="cliclac">
                     <i class="material-icons">linked_camera</i>
@@ -132,7 +137,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="card card-stats">
                   <div class="card-header" data-background-color="blue">
                     <i class="material-icons">opacity</i>
@@ -143,8 +148,9 @@
                   </div>
                 </div>
               </div>
-
-              <div class="col-lg-3 col-md-6 col-sm-6">
+            </div>
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="card card-stats">
                   <div class="card-header" data-background-color="grey">
                     <i class="material-icons">gradient</i>
@@ -157,7 +163,7 @@
               </div>
 
 
-              <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="card card-stats">
                   <div class="card-header" data-background-color="grey">
                     <i class="material-icons">gradient</i>

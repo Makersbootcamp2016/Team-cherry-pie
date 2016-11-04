@@ -41,8 +41,15 @@ def function():
             gasV=round(gasV,2)
             gasU = sensor['unit']
 
+
+    Longit = dataJ['data']['location']['longitude']
+    Lat = dataJ['data']['location']['latitude']
+
+
     base = jinja_env.get_template('base.html')
-    return base.render(temp_value=temp,temp_unit=tempU,hum_value=HumV,hum_unit=HumU,gas_value=gasV,gas_unit=gasU)
+    return base.render(temp_value=temp,temp_unit=tempU,hum_value=HumV,hum_unit=HumU,gas_value=gasV,gas_unit=gasU,Longit=Longit,Lat=Lat)
+
+
 
 @app.route("/clak")
 def doesrasptakeapic():
